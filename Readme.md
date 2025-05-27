@@ -5,7 +5,7 @@
 <div align="center"><img src=".\img\Figure1.png" width="550"></div>
 (A) Schematic illustration of BAL fluid specimen collection, Pap-stained BAL cytology, as well as expert-based ETC annotation and scDNA-Seq-based ETC annotation. (B) Pap-stained cytology images (bottom) and single-cell CNA profiles (top) of cells annotated by expert cytopathologists from BALF specimens.
 
-## Spplementary Information
+## Supplementary Information
 ### Extra Performance evaluation of binary classification tasks
 <div align="center"><img src=".\img\Figure4.png" width="750"></div>
 (A) Confusion matrices of top four SOTA classifiers for malignant-benign cells classification. (B) Confusion matrices of top four SOTA classifiers for SCLC-NSCLC subtype classification. The darker the color, the greater the proportion of predictions for that category in the true labels. The optimal performance of the top four SOTA models on the test set is presented.
