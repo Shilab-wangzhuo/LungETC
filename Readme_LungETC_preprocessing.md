@@ -1,6 +1,7 @@
 # LungETC: Single-cell extraction and segmentation
 
-<div align="center"><img src=".\img\Figure2.png" width="750">Here we give more details about the Single-cell extration and segmentation step.</div>
+<div align="center"><img src=".\img\Figure2.png" width="750"></div>
+Here we give more details about the Single-cell extration and segmentation step.
 
 ## Single-cell extraction
 
