@@ -49,6 +49,8 @@ pip install -v -e .
 tar -xf tools/Step4_qc/EfficientNet-PyTorch.zip -C tools/Step4_qc/EfficientNet-PyTorch
 cd tools/Step4_qc/EfficientNet-PyTorch
 pip install efficientnet_pytorch
+
+tar -xf tools/Step7_SCLC_NSCLC_classification/weight/densenet161.zip -C tools/Step7_SCLC_NSCLC_classification/weight
 ```
 
 ## Usage
@@ -100,8 +102,6 @@ python tools/Step7_SCLC_NSCLC_classification/SCLC_NSCLC_classifier.py --test_dir
 python test.py -i /your/input/svs_file/path -o /output/folder 
 # [-o] is optional
 ```
-
-**Note: Due to the large number of image files, we only retained the results of five patch-level images in Steps 1 through 5. The results of Step 6 cover the entire WSI.**
 
 ## Process Illustration
 
