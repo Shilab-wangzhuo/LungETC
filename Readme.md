@@ -6,7 +6,7 @@
 
 **Figure1:** (A) Schematic illustration of BAL fluid specimen collection, Pap-stained BAL cytology, as well as expert-based ETC annotation and scDNA-Seq-based ETC annotation. (B) Pap-stained cytology images (bottom) and single-cell CNA profiles (top) of cells annotated by expert cytopathologists from BALF specimens.
 
-**Download dataset:** [LungETC_dataset.zip](https://drive.google.com/file/d/13460346223245054806/view?usp=sharing)
+**Download dataset:** [LungETC_dataset.zip](https://github.com/Shilab-wangzhuo/LungETC/raw/refs/heads/main/LungETC_dataset/LungETC_dataset.zip)
 
 
 ## Supplementary Information
