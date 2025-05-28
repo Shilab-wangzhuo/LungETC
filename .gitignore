@@ -8,6 +8,9 @@ process_local.bat
 /demo/positive/*.svs
 /demo/positive/*.zip
 /demo/id_project.txt
+/demo.zip
+/LungETC_dataset/Malignant_cells/
+/LungETC_dataset/Benign_cells/
 
 
 

@@ -3,12 +3,17 @@
 ## Our Dataset
 
 <div align="center"><img src=".\img\Figure1.png" width="550"></div>
-(A) Schematic illustration of BAL fluid specimen collection, Pap-stained BAL cytology, as well as expert-based ETC annotation and scDNA-Seq-based ETC annotation. (B) Pap-stained cytology images (bottom) and single-cell CNA profiles (top) of cells annotated by expert cytopathologists from BALF specimens.
+
+**Figure1:** (A) Schematic illustration of BAL fluid specimen collection, Pap-stained BAL cytology, as well as expert-based ETC annotation and scDNA-Seq-based ETC annotation. (B) Pap-stained cytology images (bottom) and single-cell CNA profiles (top) of cells annotated by expert cytopathologists from BALF specimens.
+
+**Download dataset:** [LungETC_dataset.zip](https://drive.google.com/file/d/13460346223245054806/view?usp=sharing)
+
 
 ## Supplementary Information
 ### Extra Performance evaluation of binary classification tasks
-<div align="center"><img src=".\img\Figure4.png" width="750"></div>
-(A) Confusion matrices of top four SOTA classifiers for malignant-benign cells classification. (B) Confusion matrices of top four SOTA classifiers for SCLC-NSCLC subtype classification. The darker the color, the greater the proportion of predictions for that category in the true labels. The optimal performance of the top four SOTA models on the test set is presented.
+<div align="center"><img src=".\img\FigureS1.png" width="750"></div>
+
+**FigureS1:** (A) Confusion matrices of top four SOTA classifiers for malignant-benign cells classification. (B) Confusion matrices of top four SOTA classifiers for SCLC-NSCLC subtype classification. The darker the color, the greater the proportion of predictions for that category in the true labels. The optimal performance of the top four SOTA models on the test set is presented.
 
 ### Details of Single-cell Extraction and Segmentation
 [Click Here for Details](./Readme_LungETC_preprocessing.md)
@@ -16,6 +21,8 @@
 
 ## Quick start
 <div align="center"><img src=".\img\Figure2.png" width="750"></div>
+
+**Figure2:** Overview of the pipeline using LungETC for BAL-based lung cancer diagnosis and pathological subtyping. (A) Single-cell extraction and segmentation workflow.(B) Malignant-benign classifier training.(C) Pathological subtyping model training.
 
 Before you start, we recommend you to create a new conda environment. 
 
