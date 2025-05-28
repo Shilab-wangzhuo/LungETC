@@ -1,7 +1,7 @@
 # LungETC: Single-cell extraction and segmentation
 
 <div align="center"><img src=".\img\Figure2.png" width="750"></div>
-<div align="center" style="font-weight: bold;">Figure2</div>
+<div style="text-align: center; font-weight: bold;">Figure2</div>
 Here we give more details about the Single-cell extration and segmentation step.
 
 ## Single-cell extraction
@@ -9,7 +9,7 @@ Here we give more details about the Single-cell extration and segmentation step.
 A YOLOX network was trained to detect single cells in patch-level images. During inference, patch-level images were input, and annotations in ‘json’ format were output. Regions with a confidence score > 0.3 and IoU > 0.5 (after NMS) were retained, cropped, and used as input for the next stage.
 
 <div align="center"><img src=".\img\FigureS2.png" width="750"></div>
-<div align="center" style="font-weight: bold;">FigureS2</div>
+<div style="text-align: center; font-weight: bold;">FigureS2</div>
 
 
 Reference: YOLOX-->[https://github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
@@ -24,14 +24,14 @@ Reference: YOLOX-->[https://github.com/Megvii-BaseDetection/YOLOX](https://githu
  We also evaluated the model on a test set of 200 patch-level images, in which we manual annotated 4069 cells totally while The model annotated a total of 6,550. Among the model's annotations, 3,930 cells were correctly detected, 242 were duplicate detections, and 2,378 were low-quality detections. Compared to the manual annotations, there were 139 missed detections. Since the low-quality detections will be removed during the subsequent quality control step, we only consider the missed and duplicate detections as errors, totaling 381, which accounts for 9.4% of all manually annotated single cells.
 
 <div align="center"><img src=".\img\FigureS3.png" width="550"></div>
-<div align="center" style="font-weight: bold;">FigureS3</div>
+<div style="text-align: center; font-weight: bold;">FigureS3</div>
 
 ## Single-cell Quality Control
 
 After single-cell extraction, a QC model was used to remove non-cellular constituents (e.g., nuclei, debris, incomplete cells). A dataset of low-quality images with 6 categories was created, and single-cell images were resized to 224×224 pixels. A seven-class classification model, based on a pre-trained EfficientNet-B2, was trained to filter out low-quality images.
 
 <div align="center"><img src=".\img\FigureS4.png" width="750"></div>
-<div align="center" style="font-weight: bold;">FigureS4</div>
+<div style="text-align: center; font-weight: bold;">FigureS4</div>
 
 Reference: EfficientNet-->[https://github.com/lukemelas/EfficientNet-PyTorch](https://github.com/lukemelas/EfficientNet-PyTorch)
 
@@ -45,7 +45,7 @@ Our QC model achieved an accuracy of 0.7889 on the validation set. We further ev
 
 ## Single-cell Segmeantation
 <div align="center"><img src=".\img\FigureS5.png" width="750"></div>
-<div align="center" style="font-weight: bold;">FigureS5</div>
+<div style="text-align: center; font-weight: bold;">FigureS5</div>
 
 Reference: UNet-->[https://github.com/milesial/Pytorch-UNet](https://github.com/milesial/Pytorch-UNet)
 
