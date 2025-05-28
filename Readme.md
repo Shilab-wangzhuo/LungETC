@@ -87,49 +87,18 @@ python tools/Step4_qc/QC.py --test_dir /output_dir/Step3_sc_slide/N1  --save_dir
 python tools/Step5_cut/Pytorch-UNet-master/predict.py -i /output_dir/Step4_qc/N1 -o  /output_dir/Step5_cut
 
 # Step 6: Classify whether the cell is benign or malignant.
-python tools/Step6_classify/efficient_classify.py --test_dir /output_dir/Step5_cut/N1/json_cut_out   --save_dir /output_dir/Step6_classify/N1 --ori_img_dir /output_dir/Step4_qc/N1 
+python tools/Step6_malignant_benign_classification/malignant_benign_classfier.py --test_dir /output_dir/Step5_cut/N1/json_cut_out   --save_dir /output_dir/Step6_malignant_benign_classification/N1 --ori_img_dir /output_dir/Step4_qc/N1 
+
+# Step 7: Classify whether the malignant cell is SCLC or NSCLC.
+python tools/Step7_SCLC_NSCLC_classification/SCLC_NSCLC_classifier.py --test_dir /output_dir/Step6_malignant_benign_classification/N1/malignant  --save_dir /output_dir/Step7_SCLC_NSCLC_classification/N1 --ori_img_dir /output_dir/Step6_malignant_benign_classification/N1/malignant_ori 
 
 ```
 
-- Run via Bash (Windows)
+- Run the whole process
 ```bash
 # before you start, make sure you activate your conda environment.
-process.bat -i /your/input/svs_file/path -o /output/folder 
+python test.py -i /your/input/svs_file/path -o /output/folder 
 # [-o] is optional
-```
-
-
-
-## Demo
-
-We present partial results of eight samples in the `demo` (including four positive samples and four negative samples).
-
-The input file format and the output directory structure are shown as follows.
-```  
-Input file: N1.svs
-
-Output directory structure:
-
-    -- N1   
-        - Step1_slide   
-            - N1             # Non-overlapping patches of 1024×1024 pixels.
-        - Step2_YOLOX
-            - N1             # YOLOX model results.
-        - Step3_sc_slide
-            - N1             # Single-cell images.
-        - Step4_qc
-            - N1             # High-quality single-cell images.
-            - N1.txt         # Probability values for each cell given by the QC model.
-        - Step5_cut
-            - N1
-                - json               # JSON files for each single-cell image.
-                - json_cut_out       # High-quality single-cell images with the background removed.
-                - vis                # Masks of single-cell images.
-        - Step6_classify   
-            - N1
-                - cancer             # Cell images identified as malignant (background removed).
-                - cancer_ori         # Cell images identified as malignant (with backgroung).
-            - N1.txt         # Malignancy probability values for each cell given by the binary classification model.
 ```
 
 **Note: Due to the large number of image files, we only retained the results of five patch-level images in Steps 1 through 5. The results of Step 6 cover the entire WSI.**
@@ -156,6 +125,10 @@ Remove blurry cells, incomplete cells, cell fragments, multicellular clusters, i
 
 Segment cells from the background in the single-cell images to effectively reduce background interference.
 
-6. Step 6: Binary Classification
+6. Step 6: Malignant-Benign Classification
 
 Classify whether the cell is benign or malignant.
+
+7. Step 7: SCLC-NSCLC Classification
+
+Classify whether the malignant cell is SCLC or NSCLC.

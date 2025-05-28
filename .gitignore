@@ -1,6 +1,4 @@
-/tests/
-tools/Step2_YOLOX/YOLOX/YOLOX_weights/best_ckpt.pth
-process_local.bat
+/tools/Step2_YOLOX/YOLOX/YOLOX_weights/best_ckpt.pth
 /tools/Step6_classify/weights/weightB/0804_1338/
 /tools/Step6_classify/weights/weightS/0803_1049/
 /code/
@@ -11,6 +9,7 @@ process_local.bat
 /demo.zip
 /LungETC_dataset/Malignant_cells/
 /LungETC_dataset/Benign_cells/
+/demo/
 
 
 
