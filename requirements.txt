@@ -1,0 +1,10 @@
+opencv-python==4.9.0.80
+tqdm==4.64.1
+Pillow==9.3.0
+loguru==0.5.3
+json5==0.9.25
+labelme==5.2.1
+numpy==1.23.5
+wandb==0.13.5
+matplotlib==3.6.2
+
